@@ -1,8 +1,11 @@
 name: actions-smoke
 on:
   workflow_dispatch:
+  push:
   issues:
     types: [opened, labeled]
+  issue_comment:
+    types: [created]
 jobs:
   ping:
     runs-on: ubuntu-latest
