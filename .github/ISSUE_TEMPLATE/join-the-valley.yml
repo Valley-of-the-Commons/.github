@@ -1,0 +1,31 @@
+name: Join the Valley
+description: Request write access to the valley-of-the-commons org
+title: "Join: @YOUR-USERNAME"
+labels: ["join-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Open this and a steward approves it with one comment. The invite goes to the
+        email on your GitHub account — accept it there or at github.com/valley-of-the-commons.
+
+        Faster alternative: hand your username to a steward at the venue.
+  - type: input
+    id: who
+    attributes:
+      label: Who are you
+      description: Name, and which session or build you're here for.
+      placeholder: "Ada — week 3, P2P wiki"
+    validations:
+      required: true
+  - type: input
+    id: bringing
+    attributes:
+      label: Anything you're bringing
+      description: A repo to transfer in, hardware, a talk. Optional.
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        **Stewards:** comment `/approve` to invite the issue author. Any other comment does nothing.
